@@ -1,0 +1,60 @@
+.loginseller {
+  width: 60%;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 3rem 3rem;
+  margin-top: 3rem;
+  border-radius: 10px;
+}
+
+.loginUser {
+  width: 50%;
+  margin: 3rem auto;
+}
+
+.signinUser {
+  width: 50%;
+  margin: 3rem auto;
+}
+
+.sellerRegistration {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.cartFrom {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  min-height: 5px;
+  margin: 10vh 0;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3rem 5rem 2rem 5rem;
+  background-color: white;
+  left: 25%;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 700px) {
+  .form {
+    margin: 0 15px;
+  }
+
+  .loginseller,
+  .sellerRegistration {
+    width: 90%;
+    padding: 1rem;
+  }
+  .loginUser,
+  .signinUser {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .cartFrom {
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 3rem 1rem;
+  }
+}

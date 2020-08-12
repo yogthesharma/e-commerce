@@ -1,0 +1,56 @@
+.mainDiv {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cardDiv {
+  width: 20rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  border-radius: 30px;
+  margin: 2rem;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.otherCards {
+  margin: 3rem 1rem;
+  border: 2px solid black;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.cardDiv p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.cardImage {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 30px;
+}
+
+@media (max-width: 700px) {
+  .cardDiv {
+    width: 100%;
+    margin: 3rem 0;
+    border-radius: 0;
+    border: unset;
+    border-bottom: 1px solid black;
+  }
+  .otherCards {
+    width: 100%;
+    margin: 3rem 0;
+    border-radius: 0;
+    border: unset;
+    border-bottom: 1px solid black;
+  }
+}

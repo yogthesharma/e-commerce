@@ -1,0 +1,33 @@
+.itemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10rem;
+  width: 70%;
+  margin-top: 2rem;
+  border-bottom: 2px solid black;
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 1rem 1rem;
+}
+
+.insideItemConainer {
+  display: flex;
+  width: 100%;
+  align-items: unset;
+  justify-content: flex-end;
+  padding-bottom: 4px;
+}
+
+@media only screen and (max-width: 700px) {
+  .itemContainer {
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+
+  .insideItemConainer {
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+  }
+}
