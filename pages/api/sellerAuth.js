@@ -5,7 +5,7 @@ import Cors from "cors";
 
 // this is middleware
 const cors = Cors({
-  methods: [GET, POST],
+  methods: ["GET", "POST"],
 });
 
 export default async (req, res) => {
