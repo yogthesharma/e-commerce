@@ -1,8 +1,8 @@
 module.exports = {
   env: {
-    customVal: "Yog Sharma",
+    customVal: process.env.customVal,
   },
   publicRuntimeConfig: {
-    FIRE_KEY: "AIzaSyDeV1xXulARlDPoJEOgUmHlic28LdQi2kU",
+    FIRE_KEY: process.env.customVal,
   },
 };
