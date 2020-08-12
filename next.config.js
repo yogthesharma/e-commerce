@@ -3,6 +3,6 @@ module.exports = {
     customVal: process.env.customVal,
   },
   publicRuntimeConfig: {
-    FIRE_KEY: process.env.customVal,
+    FIRE_KEY: process.env.FIRE_KEY,
   },
 };
