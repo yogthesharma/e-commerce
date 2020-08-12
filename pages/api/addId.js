@@ -1,6 +1,15 @@
 import Fire from "../../components/firebase";
 const firebase = require("firebase/app");
 const nodemailer = require(`nodemailer`);
+import initMiddleware from "../../components/init-middleware";
+import Cors from "cors";
+
+// this is middleware
+const cors = initMiddleware(
+  Cors({
+    methods: [GET, POST],
+  })
+);
 
 export default async (req, res) => {
   if (req.method === "POST") {
@@ -96,46 +105,6 @@ export default async (req, res) => {
                   stock: String(result),
                 });
 
-              // nodemailer config
-
-              const output = `
-          <h3>Order Placed</h3>
-          <p>Order ID :${itemId}</p>
-          <p>Order Date :${date}</p>
-          <p>Price : ${tPrice}
-          `;
-              // create reusable transporter object using the default SMTP transport
-              let transporter = nodemailer.createTransport({
-                host: "smtp.gmail.com",
-                // secure: false, // true for 465, false for other ports
-                auth: {
-                  user: `yogthesharma@gmail.com`, // generated ethereal user
-                  pass: `00000000@Akk`, // generated ethereal password
-                },
-              });
-              console.log(email, "sending");
-              // send mail with defined transport object
-              let info = await transporter.sendMail({
-                from: "yogthesharma@gmail.com", // sender address
-                to: email, // list of receivers
-                subject: "Hello ✔", // Subject line
-                text: "Hello world?", // plain text body
-                html: output, // html body
-              });
-
-              console.log("Message sent: %s", info.messageId);
-              console.log("Message sent: %s", another.messageId);
-              // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-
-              // Preview only available when sending through an Ethereal account
-              console.log(
-                "Preview URL: %s",
-                nodemailer.getTestMessageUrl(info)
-              );
-              console.log(
-                "Preview URL: %s",
-                nodemailer.getTestMessageUrl(another)
-              );
               res.json({
                 msg: "OrderP Placed",
                 errFlag: false,

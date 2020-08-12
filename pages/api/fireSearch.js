@@ -1,4 +1,13 @@
 import Fire from "../../components/firebase";
+import initMiddleware from "../../components/init-middleware";
+import Cors from "cors";
+
+// this is middleware
+const cors = initMiddleware(
+  Cors({
+    methods: [GET, POST],
+  })
+);
 
 export default async (req, res) => {
   if (req.method === "POST") {
