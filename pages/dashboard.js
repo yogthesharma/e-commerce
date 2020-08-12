@@ -23,7 +23,7 @@ const DashBoard = () => {
       return alert("Please enter some value before searching");
     console.log(fetchedData);
     await Axios.post(
-      "http://localhost:3000/api/fireSearch",
+      "http://127.0.0.1:3000/api/fireSearch",
       { search },
       {
         headers: {
