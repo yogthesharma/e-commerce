@@ -1,17 +1,16 @@
 import Fire from "../../components/firebase";
 // test
 const admin = require("firebase-admin");
-import initMiddleware from "../../components/init-middleware";
+import runMiddleware from "../../components/init-middleware";
 import Cors from "cors";
 
 // this is middleware
-const cors = initMiddleware(
-  Cors({
-    methods: [GET, POST],
-  })
-);
+const cors = Cors({
+  methods: [GET, POST],
+});
 
 export default async (req, res) => {
+  await runMiddleware(req, res, cors);
   if (req.method === "POST") {
     if (req.headers.purpose === "login") {
       const { email, password } = req.body;
