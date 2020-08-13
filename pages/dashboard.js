@@ -67,6 +67,7 @@ const DashBoard = () => {
   };
 
   useEffect(() => {
+    console.log(process.env.PORT);
     if (router.pathname === "/dashboard" && router.pathname !== "/seller") {
       SellerAccountDetection();
     }

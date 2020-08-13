@@ -5,6 +5,8 @@ import Cors from "cors";
 // this is middleware
 const cors = Cors({
   methods: ["GET", "POST"],
+  // origin: "http://localhost:3000/",
+  origin: "*",
 });
 
 export default async (req, res) => {

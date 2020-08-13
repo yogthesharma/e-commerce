@@ -27,6 +27,7 @@ export default async (req, res) => {
   }
   if (req.method === "GET") {
     try {
+      console.log(process.env.PORT);
       await Fire.firestore()
         .collection("e-commerce-data")
         .get()
